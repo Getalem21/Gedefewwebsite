@@ -1,4 +1,289 @@
-html,
+/* ===================== BODY ===================== */
 body {
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+
+  /* Full sticky background for all pages */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('./Assets/gedefew.jpg');
+  background-size:contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Sticky effect */
+  color: white;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar ul {
+  padding-right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f39c12;
+}
+
+/* ===================== HOME ===================== */
+.home {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.home h1 {
+  font-size: 6vw;
+  margin-bottom: 10px;
+}
+
+.home h3 {
+  font-size: 3vw;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #f39c12;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: white;
+  color: #111;
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  padding: 100px 50px;
+  text-align: center;
+  background: rgba(0,0,0,0.4); /* dark overlay to see bg behind */
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.section.light {
+  background: rgba(245,245,245,0.9); /* light semi-transparent for readability */
+  color: #111;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* ===================== CARDS ===================== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: left;
+  color: #111;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* ===================== CONTACT ===================== */
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-left,
+.contact-right {
+  max-width: 400px;
+  text-align: left;
+}
+
+.contact-left h3,
+.contact-right h3 {
+  margin-bottom: 15px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  color: #f39c12;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #f39c12;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: rgba(17,17,17,0.9);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .section {
+    padding: 80px 30px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .home {
+    min-height: 50vh;
+    padding: 40px 20px;
+    background-attachment: scroll; /* Disable fixed bg on mobile */
+  }
+
+  .home h1 {
+    font-size: 8vw;
+  }
+
+  .home h3 {
+    font-size: 4vw;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 10vw;
+  }
+
+  .home h3 {
+    font-size: 5vw;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+  }
 }
