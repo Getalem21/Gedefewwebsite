@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import './Home.css';
 import { Link } from "react-router-dom";
+import logo from "../Assets/myphoto.png";
 
 const skills = [
   "Web Development",
@@ -63,7 +64,7 @@ const Home = () => {
         <div className="Homelogo">
           <li>
             <Link to="/">
-              <img src="" alt="My Portfolio" className="HomeLogoImage" />
+              <img src={logo} alt="My Portfolio" className="HomeLogoImage" />
             </Link>
           </li>
           <li>
