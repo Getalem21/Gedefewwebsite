@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import gedefew from  './Assets/gedefew.jpg'
 
 function App() {
   return (
